@@ -1,45 +1,48 @@
 <!--
-  # time
 
-  时间
+@element z-time
 
-  * 封装自 https://github.com/github/time-elements
+# `<z-time-*>`
 
-  ## Example
+time element which all encapsulated from [github/time-elements](https://github.com/github/time-elements)
 
-  ```
-  on 2 Apr
-  <jie-time-relative datetime="2014-04-01T16:30:00-08:00">
+- `<z-time-relative>`
+- `<z-time-ago>`
+- `<z-time-local>`
+
+## Attribtues
+
+- `datetime`
+
+-->
+
+<!--
+
+@example default
+
+<ul>
+  <li><z-time-relative datetime="2014-04-01T16:30:00-08:00">
     April 1, 2014
-  </jie-time-relative>
-
-  3 years ago
-  <jie-time-ago datetime="2012-04-01T16:30:00-08:00">
+  </z-time-relative></li>
+  <li><z-time-ago datetime="2012-04-01T16:30:00-08:00">
     April 1, 2014
-  </jie-time-ago>
-
-  3y
-  <jie-time-ago datetime="2012-04-01T16:30:00-08:00" format="micro">
+  </z-time-ago></li>
+  <li><z-time-ago datetime="2012-04-01T16:30:00-08:00" format="micro">
     April 1, 2014
-  </jie-time-ago>
-
-  2 Apr 2014 上午8:30
-  <jie-time-local datetime="2014-04-01T16:30:00-08:00"
+  </z-time-ago></li>
+  <li><z-time-local datetime="2014-04-01T16:30:00-08:00"
       month="short"
       day="numeric"
       year="numeric"
       hour="numeric"
       minute="numeric">
     April 1, 2014 4:30PM PDT
-  </jie-time-local>
-  ```
+  </z-time-local></li>
+</ul>
+
 -->
 
 <link rel="import" href="../polymer/polymer.html">
-
-<polymer-element name="jie-time" attributes="" noscript>
-  <template><content></content></template>
-</polymer-element>
 
 <script>
   (function () {
@@ -318,7 +321,7 @@
     }
 
 
-    var ExtendedTimePrototype = Object.create(document.createElement('jie-time'));
+    var ExtendedTimePrototype = Object.create(document.createElement('z-time'));
     // var ExtendedTimePrototype;
     // if ('HTMLTimeElement' in window) {
     //   ExtendedTimePrototype = Object.create(window.HTMLTimeElement.prototype);
@@ -546,11 +549,11 @@
     //   var time = new RelativeTimeElement()
     //   # => <time is='relative-time'></time>
     //
-    window.RelativeTimeElement = document.registerElement('jie-time-relative', {
+    window.RelativeTimeElement = document.registerElement('z-time-relative', {
       prototype: RelativeTimePrototype
     });
 
-    window.TimeAgoElement = document.registerElement('jie-time-ago', {
+    window.TimeAgoElement = document.registerElement('z-time-ago', {
       prototype: TimeAgoPrototype
     });
 
@@ -559,7 +562,7 @@
     //   var time = new LocalTimeElement()
     //   # => <time is='local-time'></time>
     //
-    window.LocalTimeElement = document.registerElement('jie-time-local', {
+    window.LocalTimeElement = document.registerElement('z-time-local', {
       prototype: LocalTimePrototype
     });
 
