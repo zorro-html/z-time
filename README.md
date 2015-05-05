@@ -1,34 +1,35 @@
-# time
+# `<z-time-*>`
 
-时间
+time element which all encapsulated from [github/time-elements](https://github.com/github/time-elements)
 
-* 封装自 https://github.com/github/time-elements
+- `<z-time-relative>`
+- `<z-time-ago>`
+- `<z-time-local>`
 
-## Example
+## Attribtues
+
+- `datetime`
+
+## Examples
 
 ```
-on 2 Apr
-<jie-time-relative datetime="2014-04-01T16:30:00-08:00">
-  April 1, 2014
-</jie-time-relative>
-
-3 years ago
-<jie-time-ago datetime="2012-04-01T16:30:00-08:00">
-  April 1, 2014
-</jie-time-ago>
-
-3y
-<jie-time-ago datetime="2012-04-01T16:30:00-08:00" format="micro">
-  April 1, 2014
-</jie-time-ago>
-
-2 Apr 2014 上午8:30
-<jie-time-local datetime="2014-04-01T16:30:00-08:00"
-    month="short"
-    day="numeric"
-    year="numeric"
-    hour="numeric"
-    minute="numeric">
-  April 1, 2014 4:30PM PDT
-</jie-time-local>
+<ul>
+  <li><z-time-relative datetime="2014-04-01T16:30:00-08:00">
+    April 1, 2014
+  </z-time-relative></li>
+  <li><z-time-ago datetime="2012-04-01T16:30:00-08:00">
+    April 1, 2014
+  </z-time-ago></li>
+  <li><z-time-ago datetime="2012-04-01T16:30:00-08:00" format="micro">
+    April 1, 2014
+  </z-time-ago></li>
+  <li><z-time-local datetime="2014-04-01T16:30:00-08:00"
+      month="short"
+      day="numeric"
+      year="numeric"
+      hour="numeric"
+      minute="numeric">
+    April 1, 2014 4:30PM PDT
+  </z-time-local></li>
+</ul>
 ```
