@@ -6,6 +6,12 @@ time element which all encapsulated from [github/time-elements](https://github.c
 - `<z-time-ago>`
 - `<z-time-local>`
 
+## Import
+
+```
+<link rel="import" href="z-time/z-time.html">
+```
+
 ## Attribtues
 
 - `datetime`
